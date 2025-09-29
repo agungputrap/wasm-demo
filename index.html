@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rust + WebAssembly</title>
+</head>
+<body>
+  <h1>Check the console 👇</h1>
+  <script type="module">
+    import init, { greet } from "./pkg/hello_wasm.js";
+
+    init().then(() => {
+      console.log(greet("Rustacean"));
+    });
+  </script>
+</body>
+</html>
